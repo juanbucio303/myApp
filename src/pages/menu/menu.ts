@@ -5,6 +5,7 @@ import { DosConductoresPage } from '../dos-conductores/dos-conductores';
 import { DosCircuitosPage } from '../dos-circuitos/dos-circuitos';
 import { MasDeDosConductoresPage } from '../mas-de-dos-conductores/mas-de-dos-conductores';
 import { ProveedorProvider } from '../../providers/proveedor/proveedor';
+import { InicioPage } from '../inicio/inicio';
 
 /**
  * Generated class for the MenuPage page.
@@ -19,6 +20,8 @@ import { ProveedorProvider } from '../../providers/proveedor/proveedor';
   templateUrl: 'menu.html',
 })
 export class MenuPage {
+  tip:any;
+  tipo:any;
   datos={	"id_resistencia":"112",
               "nombre":"pablo",
               "mm":"1",
@@ -27,6 +30,9 @@ export class MenuPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,
   public proveedor : ProveedorProvider) {
     // this.unConductor();
+    this.tip=navParams.get('tipo');
+    // console.log(this.tip[0]["id_role"]);
+    this.tipo=this.tip[0]["id_role"];
 
   }
 
@@ -49,9 +55,14 @@ export class MenuPage {
   borrar(){
     this.proveedor.borrar();
   }
+  cerrar(){
+    this.navCtrl.setRoot(InicioPage);
+  }
 usuarios:any=[]
   ionViewDidLoad() {
     console.log("datos:");
+    // console.log(this.tipo);
+
    // console.log(this.usuarios);
    // this.proveedor.getDatos()
    // .then(data => {

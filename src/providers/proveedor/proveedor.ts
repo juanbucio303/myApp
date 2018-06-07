@@ -24,7 +24,7 @@ export class ProveedorProvider {
       });
     });
   }
-  addUser(datos) {
+  addResistencia(datos) {
   let options={headers: { 'Content-Type':'application/json'}};
   return new Promise(resolve =>{
     this.http.post(this.apiUrl+"clientes/agregar",JSON.stringify(datos),options).
@@ -35,6 +35,18 @@ export class ProveedorProvider {
     });
   });
 }
+addUser(datos) {
+let options={headers: { 'Content-Type':'application/json'}};
+return new Promise(resolve =>{
+  this.http.post(this.apiUrl+"clientes/usuario/agregar",JSON.stringify(datos),options).
+  subscribe(data => {
+    resolve(data);
+  },err =>{
+      console.log(err);
+  });
+});
+}
+
 borrar(){
   let id:any=111;
   // return new Promise(resolve =>{
@@ -48,7 +60,31 @@ borrar(){
     });
   });
 }
+getAutentificar(datos) {
+  let url:any='clientes/veri/';
+  let dato:any=datos;
+  let options={headers: { 'Content-Type':'application/json'}};
+  return new Promise(resolve => {
+    this.http.get(this.apiUrl+'clientes/veri/'+datos).
+    subscribe(data => {
+      resolve(data);
+    }, err => {
+      console.log(err);
+    });
+  });
+}
 
+getUserName(dato){
+  let dat:any=dato;
+  return new Promise(resolve => {
+    this.http.get(this.apiUrl+'clientes/name/'+dat).
+    subscribe(data => {
+      resolve(data);
+    }, err => {
+      console.log(err);
+    });
+  });
+}
 
   // obtenerdatos(){
   //     return  this.http.get(apiUrl);
