@@ -32,16 +32,22 @@ export class InicioPage {
     this.proveedor.getAutentificar(datos)
     .then(data => {
       this.resp = data;
-      console.log(this.resp[0]);
-      if(this.resp[0]==true){
+      console.log(this.resp[0]['id_role']);
+      if(this.resp[0]['id_role']==2){
         // this.navCtrl.push(MenuPage);
-        this.navCtrl.setRoot(MenuPage,{tipo:this.resp[1]});
+        this.navCtrl.setRoot(MenuPage,{tipo:this.resp[0]['id_role']});
+      }else if(this.resp[0]['id_role']==1){
+        console.log("menuAdmon");
       }else{
         // alert(this.resp);
         this.presentAlert();
       }
     });
   }
+  // prueba(){
+  //   let dta={id:'1',estado:'2'};
+  //   this.proveedor.updateUser(dta);
+  // }
   registro(){
     this.navCtrl.push(RegistroPage);
   }

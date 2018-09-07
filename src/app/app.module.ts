@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { MenuPage } from "../pages/menu/menu";
+import { MenuAdminPage } from "../pages/menu-admin/menu-admin";
 
 //Pages
 import { UnConductorPage } from '../pages/un-conductor/un-conductor';
@@ -40,7 +41,8 @@ import { ResmasdosconPage } from "../pages/resmasdoscon/resmasdoscon";
     ResdoscircPage,
     ResmasdosconPage,
     InicioPage,
-    RegistroPage
+    RegistroPage,
+    MenuAdminPage
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,8 @@ import { ResmasdosconPage } from "../pages/resmasdoscon/resmasdoscon";
     ResdoscircPage,
     ResmasdosconPage,
     InicioPage,
-    RegistroPage
+    RegistroPage,
+    MenuAdminPage
   ],
   providers: [
     StatusBar,
