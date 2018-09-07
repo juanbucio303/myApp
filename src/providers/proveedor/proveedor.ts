@@ -24,6 +24,15 @@ export class ProveedorProvider {
       });
     });
   }
+  getAllResisstencias() {
+    return new Promise(resolve => {
+      this.http.get(this.apiUrl+'clientes/all/').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
   addResistencia(datos) {
   let options={headers: { 'Content-Type':'application/json'}};
   return new Promise(resolve =>{
@@ -33,6 +42,20 @@ export class ProveedorProvider {
     },err =>{
         console.log(err);
     });
+  });
+}
+updateRes(dato){
+  // let dat:any=dato;
+  return new Promise(resolve => {
+    this.http.put(this.apiUrl+'clientes/resistencias/actualizar/',dato)
+    .subscribe(
+      data => {
+        resolve(data);
+      },
+      err => {
+        console.log(err);
+      }
+    );
   });
 }
 borrar(){
@@ -74,10 +97,10 @@ getAutentificar(datos) {
   });
 }
 
-getAllUser(dato){
-  let dat:any=dato;
+getAllUser(){
+  // let dat:any=dato;
   return new Promise(resolve => {
-    this.http.get(this.apiUrl+'usuarios/'+dat).
+    this.http.get(this.apiUrl+'usuarios/').
     subscribe(data => {
       resolve(data);
     }, err => {

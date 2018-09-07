@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {ProveedorProvider} from '../../providers/proveedor/proveedor';
 
 /**
  * Generated class for the ResistenciasPage page.
@@ -14,12 +15,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'resistencias.html',
 })
 export class ResistenciasPage {
+dataRes:any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public proveedor: ProveedorProvider) {
+    this.dataRes=this.navParams.get('data');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ResistenciasPage');
   }
-
+  updateRes(id,estado){
+    let dta={id:id,estado:estado};
+    this.proveedor.updateRes(dta);
+  }
 }

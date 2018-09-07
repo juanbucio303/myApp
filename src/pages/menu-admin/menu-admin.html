@@ -5,9 +5,12 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>menu-admin</ion-title>
+    <img src="../../assets/imgs/logo-electric.png" alt="">
+    <ion-buttons end>
+      <button ion-button (click)="cerrar()"> Cerrar sesion</button>
+
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -17,17 +20,17 @@
   <ion-grid>
     <ion-row justify-content-center>
     <ion-col>
-      <button ion-button block outline> Usuarios </button>
+      <button ion-button block outline (click)="redic('user')"> Usuarios </button>
     </ion-col>
   </ion-row>
   <ion-row justify-content-center>
     <ion-col>
-      <button ion-button block outline> Metodos </button>
+      <button ion-button block outline (click)="redic('met')"> Metodos </button>
     </ion-col>
   </ion-row>
   <ion-row justify-content-center>
     <ion-col>
-      <button ion-button block outline> Resistencias </button>
+      <button ion-button block outline (click)="redic('res')"> Resistencias </button>
     </ion-col>
   </ion-row>
 </ion-grid>

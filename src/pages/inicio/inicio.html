@@ -4,16 +4,15 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
+
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>inicio</ion-title>
-  </ion-navbar>
-
+    <ion-buttons end>
+      <button ion-button block name="button" (click)="registro()" color="btn" outline>Usar Offline</button>
+    </ion-buttons>
 </ion-header>
-
-
 <ion-content padding >
+  <img src="../../assets/imgs/logo-electric.png" alt="">
   <ion-list>
 
   <ion-item>
@@ -31,10 +30,10 @@
   <ion-grid>
     <ion-row>
       <ion-col col-md-6>
-        <button ion-button block (click)="verificar(usuario,contra)" style="background: #009DE0">Iniciar Sesion</button>
+        <button ion-button block (click)="verificar(usuario,contra)" color="btn" outline>Iniciar Sesion</button>
       </ion-col>
       <ion-col col-md-6>
-        <a ion-button block name="button" (click)="registro()">Registrate</a>
+        <a ion-button block name="button" (click)="registro()" color="btn" outline>Registrate</a>
       </ion-col>
     </ion-row>
   </ion-grid>

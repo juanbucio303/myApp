@@ -7,8 +7,11 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>menu</ion-title>
-    <button ion-button (click)="cerrar()"> Cerrar sesion</button>
+
+    <img src="../../assets/imgs/logo-electric.png" alt="">
+    <ion-buttons end>
+      <button ion-button (click)="cerrar()"> Cerrar sesion</button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -16,24 +19,24 @@
   <ion-grid>
     <ion-row>
       <ion-col col-md-4>
-        <ion-card ion-button (click)="rediUnConductor()">
+        <ion-card ion-button (click)="rediUnConductor()" color="btn" outline>
           <ion-card-header padding>
             Un <br> Conductor
           </ion-card-header>
         </ion-card>
-        <ion-card ion-button (click)="rediDosConductores()">
+        <ion-card ion-button (click)="rediDosConductores()" color="btn" outline>
           <ion-card-header>
             Dos <br> Conductores
           </ion-card-header>
         </ion-card>
       </ion-col>
       <ion-col col-md-4>
-        <ion-card ion-button (click)="rediDosCircuitos()">
+        <ion-card ion-button (click)="rediDosCircuitos()" color="btn" outline>
           <ion-card-header>
             Dos <br> Circuitos
           </ion-card-header>
         </ion-card>
-        <ion-card ion-button (click)="rediMasDeDosConductors()" >
+        <ion-card ion-button (click)="rediMasDeDosConductors()" color="btn" outline >
           <ion-card-header>
             Mas de dos <br> Conductores
           </ion-card-header>
