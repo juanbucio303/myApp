@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProveedorProvider } from '../../providers/proveedor/proveedor';
 import { MenuPage } from '../menu/menu';
+import { MenuAdminPage } from '../menu-admin/menu-admin';
 import { RegistroPage } from '../registro/registro';
 import { AlertController } from 'ionic-angular';
 
@@ -37,7 +38,8 @@ export class InicioPage {
         // this.navCtrl.push(MenuPage);
         this.navCtrl.setRoot(MenuPage,{tipo:this.resp[0]['id_role']});
       }else if(this.resp[0]['id_role']==1){
-        console.log("menuAdmon");
+        this.navCtrl.setRoot(MenuAdminPage,{tipo:this.resp[0]['id_role']});
+
       }else{
         // alert(this.resp);
         this.presentAlert();

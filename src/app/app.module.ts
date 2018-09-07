@@ -16,6 +16,8 @@ import { DosCircuitosPage } from '../pages/dos-circuitos/dos-circuitos';
 import { MasDeDosConductoresPage } from '../pages/mas-de-dos-conductores/mas-de-dos-conductores';
 import {InicioPage } from '../pages/inicio/inicio';
 import { RegistroPage } from '../pages/registro/registro';
+import {UsuariosPage} from '../pages/usuarios/usuarios';
+import {ResistenciasPage} from '../pages/resistencias/resistencias';
 
 
 //Providers Components
@@ -42,7 +44,10 @@ import { ResmasdosconPage } from "../pages/resmasdoscon/resmasdoscon";
     ResmasdosconPage,
     InicioPage,
     RegistroPage,
-    MenuAdminPage
+    MenuAdminPage,
+    UsuariosPage,
+    ResistenciasPage
+
   ],
   imports: [
     BrowserModule,
@@ -63,7 +68,9 @@ import { ResmasdosconPage } from "../pages/resmasdoscon/resmasdoscon";
     ResmasdosconPage,
     InicioPage,
     RegistroPage,
-    MenuAdminPage
+    MenuAdminPage,
+    ResistenciasPage,
+    UsuariosPage
   ],
   providers: [
     StatusBar,

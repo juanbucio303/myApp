@@ -42,6 +42,9 @@
     "typescript": "~2.6.2"
   },
   "description": "An Ionic project",
+  "config":{
+    "ionic_sass":"./sass.config.js"
+  },
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {},
