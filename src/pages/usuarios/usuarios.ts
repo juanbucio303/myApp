@@ -27,6 +27,7 @@ dataUsr:any;
   updateUsr(id,estado){
     let dta={id:id,estado:estado};
     this.proveedor.updateUser(dta);
+    this.navCtrl.popToRoot();
   }
 
 }

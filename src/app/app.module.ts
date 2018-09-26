@@ -28,7 +28,7 @@ import { ResultadosPage } from "../pages/resultados/resultados";
 import { ResdosconPage } from "../pages/resdoscon/resdoscon";
 import { ResdoscircPage } from "../pages/resdoscirc/resdoscirc";
 import { ResmasdosconPage } from "../pages/resmasdoscon/resmasdoscon";
-
+import { PerdidasPage } from "../pages/perdidas/perdidas";
 
 @NgModule({
   declarations: [
@@ -46,7 +46,8 @@ import { ResmasdosconPage } from "../pages/resmasdoscon/resmasdoscon";
     RegistroPage,
     MenuAdminPage,
     UsuariosPage,
-    ResistenciasPage
+    ResistenciasPage,
+    PerdidasPage
 
   ],
   imports: [
@@ -70,7 +71,8 @@ import { ResmasdosconPage } from "../pages/resmasdoscon/resmasdoscon";
     RegistroPage,
     MenuAdminPage,
     ResistenciasPage,
-    UsuariosPage
+    UsuariosPage,
+    PerdidasPage
   ],
   providers: [
     StatusBar,

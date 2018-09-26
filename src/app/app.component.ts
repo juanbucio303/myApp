@@ -8,6 +8,10 @@ import { DosConductoresPage } from '../pages/dos-conductores/dos-conductores';
 import { MenuPage } from '../pages/menu/menu';
 import { MenuAdminPage } from '../pages/menu-admin/menu-admin';
 import {InicioPage } from '../pages/inicio/inicio';
+import { PerdidasPage } from "../pages/perdidas/perdidas";
+
+
+
 @Component({
   templateUrl: 'app.html'
 })

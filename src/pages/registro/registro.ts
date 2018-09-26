@@ -35,6 +35,7 @@ usern:any;
                       "contra":pass
                     };
           this.proveedor.addUser(datos);
+          this.navCtrl.popToRoot();
         }else{
           this.presentAlert('Error Contraseña',"la contraseña no coincide");
         }

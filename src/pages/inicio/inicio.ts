@@ -5,6 +5,8 @@ import { MenuPage } from '../menu/menu';
 import { MenuAdminPage } from '../menu-admin/menu-admin';
 import { RegistroPage } from '../registro/registro';
 import { AlertController } from 'ionic-angular';
+import * as math from 'mathjs';
+import { PerdidasPage } from '../perdidas/perdidas';
 
 /**
  * Generated class for the InicioPage page.
@@ -26,6 +28,8 @@ export class InicioPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad InicioPage');
+    let rs = math.atan2(3, -3)/ math.pi;
+    console.log(rs);
   }
    resp:any;
   verificar(user:any,pass:any){
@@ -52,6 +56,11 @@ export class InicioPage {
   // }
   registro(){
     this.navCtrl.push(RegistroPage);
+  }
+  redic(){
+    this.navCtrl.push(MenuPage,{tipo:"1"});
+    // this.navCtrl.push(PerdidasPage);
+
   }
   presentAlert() {
   let alert = this.alertCtrl.create({
